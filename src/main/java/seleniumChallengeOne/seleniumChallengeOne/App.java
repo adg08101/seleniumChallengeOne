@@ -19,8 +19,7 @@ public class App
 	    	String expectedStr = "General Software Inc";
 	    	App obj = new App();
 	    	//Change Driver location
-	        System.setProperty("webdriver.chrome.driver","C:\\Users\\Owner\\Desktop\\HOME\\Home\\PROYECTOS\\selenium\\"
-	        		+ "WebDrivers\\chrome_94\\chromedriver.exe");
+	        System.setProperty("webdriver.chrome.driver",".\\driver\\chromedriver.exe");
 	      	WebDriver driver = new ChromeDriver();
 	      	driver.get("https://google.com.cu");
 	      	
@@ -61,7 +60,8 @@ public class App
     	driver.findElement(By.xpath("//input[@name='email']")).sendKeys("ahmed.davila@generalsoftwareinc.com");
     	driver.findElement(By.xpath("//input[@name='businessName']")).sendKeys("Personal Home Business");
     	driver.findElement(By.xpath("//textarea[@name='body']")).sendKeys("I'm interest into working with you guys. Automatic Testing.");
-    	driver.findElement(By.tagName("form")).submit();
+    	driver.findElement(By.xpath("//button[@class='SendButtonstyles__SendButton-pq1oxe-0 fjDNTy']")).click();
+    	System.out.println("Test executed successfully!!");
     	driver.quit();
     	System.exit(0);
     }
