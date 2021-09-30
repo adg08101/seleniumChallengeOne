@@ -18,7 +18,6 @@ public class App
 	    	String searchStr = "General Software";
 	    	String expectedStr = "General Software Inc";
 	    	App obj = new App();
-	    	//Change Driver location
 	        System.setProperty("webdriver.chrome.driver",".\\driver\\chromedriver.exe");
 	      	WebDriver driver = new ChromeDriver();
 	      	driver.get("https://google.com.cu");
